@@ -1,164 +1,96 @@
-import Footer from "~/components/footer";
-
 export default function Homepage() {
     return (
-        <div className="bg-background-main font-display text-text-main">
-            <div className="relative flex min-h-screen w-full flex-col">
-                <header className="sticky top-0 z-50 w-full bg-background-main/80 px-4 py-3 shadow-sm backdrop-blur-md transition-all duration-300 sm:px-10">
-                    <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
-                        <a className="flex items-center gap-2" href="#">
-                            <div className="size-7 text-accent">
-                                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                                    <path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <span className="text-xl font-bold tracking-tight text-text-main">Aurelia Sinclair</span>
-                        </a>
-                        <nav className="hidden items-center gap-x-8 md:flex">
-                            <a className="relative text-sm font-medium text-text-main transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:text-secondary hover:after:w-full" href="#">Portfolio</a>
-                            <a className="relative text-sm font-medium text-text-main transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:text-secondary hover:after:w-full" href="#">About</a>
-                            <a className="relative text-sm font-medium text-text-main transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:text-secondary hover:after:w-full" href="#">Contact</a>
-                        </nav>
-                        <div className="flex items-center gap-4">
-                            <button className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary/10 text-secondary transition-colors hover:bg-secondary/20"><span className="material-symbols-outlined">search</span></button>
-                            <button className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary/10 text-secondary transition-colors hover:bg-secondary/20 md:hidden"><span className="material-symbols-outlined">menu</span></button>
-                        </div>
-                    </div>
+        <div className="bg-background-light dark:bg-background-dark font-display text-secondary/80 dark:text-background-light/80">
+            <div className="relative flex w-full flex-col group/design-root overflow-x-hidden">
+                <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between whitespace-nowrap px-6 sm:px-10 lg:px-16 py-6 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm transition-colors duration-300">
+                    <a className="flex items-center gap-4 text-secondary dark:text-background-light" href="#">
+                        <h2 className="text-xl font-bold font-serif-display leading-tight tracking-[-0.015em]">Olivia Chen</h2>
+                    </a>
+                    <nav className="hidden md:flex items-center gap-10">
+                        <a className="text-secondary dark:text-background-light text-sm font-medium leading-normal hover-underline-accent" href="#">Work</a>
+                        <a className="text-secondary dark:text-background-light text-sm font-medium leading-normal hover-underline-accent" href="#">About</a>
+                        <a className="text-secondary dark:text-background-light text-sm font-medium leading-normal hover-underline-accent" href="#">Contact</a>
+                    </nav>
+                    <button className="md:hidden text-secondary dark:text-background-light">
+                        <span className="material-symbols-outlined">menu</span>
+                    </button>
                 </header>
-                <main className="flex h-full grow flex-col">
-                    <section className="relative h-screen w-full">
-                        <div className="absolute inset-0 bg-cover bg-center" data-alt="Abstract artwork with flowing golden and dark charcoal strokes." style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCeKHmLC2zLS8YAfjVp-btptUp25ksYFZa-8-mbSnEnVsmX9ulBuWsQfFZAHQTWJEOEc0y3eEdE3kjdQJzS7sg6P2r8djLfiL2VI6EWGByjdaYOhBPp4J3XqM42OQvUyhIIQ9EWf-MTbvRxdTs92lUE1KoBD_kBhm8YBNoUhfsRivEdNbKj773hVBeBToaUpV-b098wK41M2O_s0DIHvGmYKOTylDNIAhyHbYcfubXWzIGZzPrAA__pAgO5ApH5leArQTCjMgIMlSY");' }}></div>
-                        <div className="absolute inset-0 bg-text-main/70"></div>
-                        <div className="relative z-10 flex h-full flex-col items-center justify-center p-4 text-center text-white">
-                            <h1 className="text-4xl font-black leading-tight tracking-[-0.033em] sm:text-7xl">Aurelia Sinclair</h1>
-                            <p className="mt-4 text-lg font-normal leading-normal sm:text-2xl">Exploring the intersection of light and form.</p>
+                <main className="flex flex-col">
+                    <section className="flex min-h-screen flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 text-center" data-alt="Abstract painting with swirling blues and golds, evoking a sense of calm and movement." style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuyGGDS3HSfb4WjuXzsoIZwFkY67AuaubzH5UgnYt5AFC6-9RF9ZKN51IHALYqd20aBpiOcsXOuWk8qKeb2htDHBi4t2x7Asqw63ot2GKeY2sRzNtvnPV4FTIixmabeOKjD1i5WVD-LHKEBQjs01wt39aCb5eFnRQ2femIQbnhQmTYWScmqPgBkgrQgGfK1IhRKGycIaVLJpTKHLbpwcCJ2hq6UmsFNWlKACFRG59M_-TuW2-i0cGKwNzCtT1F_FpTaLBVy5u7SHk");' }}>
+                        <div className="flex flex-col gap-2">
+                            <h1 className="text-white text-5xl font-black font-serif-display leading-tight tracking-tight md:text-7xl">
+                                Olivia Chen
+                            </h1>
+                            <h2 className="text-white text-base font-normal leading-normal md:text-lg">Contemporary Painter &amp; Mixed Media Artist</h2>
                         </div>
                     </section>
-                    <div className="mx-auto w-full max-w-6xl px-4">
-                        <section className="py-16 sm:py-24">
-                            <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
-                                <div className="order-2 flex flex-col gap-6 md:order-1">
-                                    <h2 className="text-3xl font-bold leading-tight tracking-[-0.015em] text-text-main">An exploration of emotional landscapes</h2>
-                                    <p className="text-base font-normal leading-relaxed text-secondary">I'm Aurelia Sinclair, a contemporary abstract artist working primarily with oil and mixed media. My work is a continuous exploration of emotional landscapes, capturing the transient moments where light, color, and texture converge to tell a story. Each canvas is a dialogue between impulse and intention, a journey into the abstract realms of feeling and memory.</p>
-                                    <button className="flex h-12 w-fit min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold leading-normal tracking-[0.015em] text-white transition-all hover:brightness-110">
-                                        <span className="truncate">More About The Artist</span>
+                    <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16">
+                        <section className="py-20 md:py-32 bg-tertiary/[.15] -mx-6 sm:-mx-10 lg:-mx-16 px-6 sm:px-10 lg:px-16">
+                            <div className="mx-auto w-full max-w-[1280px]">
+                                <h2 className="text-secondary dark:text-background-light text-3xl font-bold font-serif-display leading-tight tracking-tight text-center mb-12">Featured Works</h2>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                    <div className="group relative overflow-hidden rounded-lg">
+                                        <img className="w-full h-full object-cover aspect-[4/5] transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="Abstract painting titled 'Serenity in Blue' with cool tones and soft brushstrokes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1zO2BRYjcIYZbQ0Qhc9AXrS8FBHbqtW8YPgXvhk3gSupYbJquHnJsKZC9F6p4DkP66jY7NCEQevlRyRkeRARS8ANNilyWrfDL8FYi0-l-wEryzeMQA758r34AQfl9MNpww6HI2DmkfgkSpkZta-gcRNq0lyiCVGOPbi03QJ6qxm6rx38FUE4srCStLjiG5f5-6PgB1uAfzQyyv-iosT5DKzLSgCZfbIfVEbjfrJvWhXTyT0h-p7jeV32Z8lQ9RLTB3ylbY6N7VxE" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                        <div className="absolute bottom-0 left-0 p-6">
+                                            <p className="text-white text-lg font-bold leading-tight">Serenity in Blue</p>
+                                        </div>
+                                    </div>
+                                    <div className="group relative overflow-hidden rounded-lg">
+                                        <img className="w-full h-full object-cover aspect-[4/5] transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="Abstract painting titled 'Golden Hour Fields' with warm yellows, oranges, and deep reds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG8qI2DSBPFEesFp7V_YwYYX_5lJ908JIqWN-YQ0Tws7Fp8KlYA9rEUuCVYzYaqJ8K60Yh_XIoFM_mOBAdl-n1RXsFwnBmOOYCxzynJOfZ1ikJkwz1bYYVm8qC4Qb3Cep3-ZUnWJjBksB6vyEBigqgEPN7dCydHfSnRwZuayuKJnyYFZ2eq20brYeU3Yhq7KX3uEI-XP-oiScZAQi9Q_LwOGXEFws1e_q1Cd5J2uVDn3OUPSxtfAMUk4sRkf-z1EkbhdcBR7PU-Xo" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                        <div className="absolute bottom-0 left-0 p-6">
+                                            <p className="text-white text-lg font-bold leading-tight">Golden Hour Fields</p>
+                                        </div>
+                                    </div>
+                                    <div className="group relative overflow-hidden rounded-lg">
+                                        <img className="w-full h-full object-cover aspect-[4/5] transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="Vibrant abstract painting titled 'Urban Reflection' with chaotic yet harmonious splashes of color." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBplRm-ceHbN3rB37LK9CjyXSRt3EXiHmAUOxZsd4JUksZ7_RAeSGgO_DBpWgie-bleolQ1iIycyCa72avsJ-YaY1-KFj-XyBZSbRiywrmcSj97ioFVbkz9OYlj2m50fv28Wpu6lNl5flfuSjjbdHefCD2aooV8M2vBUUhwhcdg9hhM-Y_x1gdP3hPXu5cHfEmkgdekfHKGQaQr-Pc2ywlJTP79ceZHO1qQYqZ4CIEKKT9wzpEr3bUW59Z7XeIsngbxoX37V4UJI-Y" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                        <div className="absolute bottom-0 left-0 p-6">
+                                            <p className="text-white text-lg font-bold leading-tight">Urban Reflection</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section className="py-20 md:py-32">
+                            <div className="flex flex-col justify-end gap-8 text-center items-center">
+                                <div className="flex flex-col gap-4 max-w-3xl">
+                                    <h2 className="text-secondary dark:text-background-light text-3xl font-bold font-serif-display leading-tight tracking-tight md:text-4xl">
+                                        Interested in a commission or have an inquiry?
+                                    </h2>
+                                    <p className="text-secondary/80 dark:text-background-light/80 text-base font-normal leading-relaxed">
+                                        I'm available for new projects and collaborations. Let's create something beautiful together.
+                                    </p>
+                                </div>
+                                <div className="flex flex-wrap gap-4 justify-center mt-4">
+                                    <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+                                        <span className="truncate">View Full Portfolio</span>
+                                    </button>
+                                    <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-secondary/10 dark:bg-background-light/10 text-secondary dark:text-background-light text-sm font-bold leading-normal tracking-[0.015em] hover:bg-secondary/20 dark:hover:bg-background-light/20 transition-colors">
+                                        <span className="truncate">Contact the Artist</span>
                                     </button>
                                 </div>
-                                <div className="order-1 flex justify-center md:order-2">
-                                    <div className="relative aspect-square w-full max-w-sm">
-                                        <div className="h-full w-full rounded-full bg-cover bg-center" data-alt="A professional headshot of the artist, Aurelia Sinclair, in her studio." style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXY5ZfZRaFPxHiweiemWueGkevfOJBK19bx4KXPIv0HSN20iJ2YceYlIf7gL6xVpvjh91avbe59RtNyaTVy_2PloNfjz_yqYFuYD3gG6r6lxTnB2IIxrDIEgrYUuAeCxJ8e2_eGcWpjlwHGygY1-MIF21ORz0pCFA6Uop2WTCdDHmqWm6LvRRfdVkPzVqHtayu2h8hBC0TvMdOjPuC4a__1Dl52EHoJPxORGglHmIBkCFN-QKmadhQWfn_PdOwV5bMJT-CXqt3r9s");' }}></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section className="py-16 sm:py-24">
-                            <h2 className="mb-12 text-center text-3xl font-bold leading-tight tracking-[-0.015em] text-text-main">Featured Works</h2>
-                            <div className="columns-1 gap-4 space-y-4 sm:columns-2 md:columns-3">
-                                <div className="group relative overflow-hidden rounded-lg break-inside-avoid">
-                                    <img alt="Abstract painting with deep blue and gold textures" className="transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHBBwxy85kKpFYdBxblfor4GxqeyKg9gNQY8U3PX7vHIkvnFIutHIvdHuO0Cl8Nq5JT44VXysp4m4RLyg1moZ3qM7GyTvSPNzHQPEp4ETV5ueqJkz7Y4plg5R-3Ee_0KHUcy0V7f2Uv2y4cEPiQrBQMM2gRmw_lBlfnfdJVBuAd4jUdCwDqOPKsivwyabpX6YrH1wYpSHUujQTuBgPBWmTZGGP_L4hAUcqWBpfLL9H34fAzOKaSaUaAP4b9U4XDfJiJgNyVDbp1to" />
-                                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-text-main/80 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                        <h3 className="font-bold text-white">Nocturne in Blue</h3>
-                                    </div>
-                                </div>
-                                <div className="group relative overflow-hidden rounded-lg break-inside-avoid">
-                                    <img alt="Vibrant abstract piece with splashes of red and yellow" className="transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq1Cxo65ZBeLyQ7WvlV_p-pZT6l4uhCaDK_mZPhv88dtQfi0833mnJh9OhntXv4HAsFot8NJkhOCAqrqMvm2a1vw8hbtiiG9OYBh0uTD-mNoxiX7--nVpLG95eiTloO-GVyfHsmG6yjU9sB6hdUBdJxK2WmWcfjjixuSqsW8RKu1cq5l3UcQyOnUWVxzpNEZ6esZGIEnpfY--OzqgtFgQAPgCiTirIalTToPlfhYdjB2AJXqBuIc3tafqqId_mLW2a5oz3lrBd1fk" />
-                                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-text-main/80 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                        <h3 className="font-bold text-white">Solar Flare</h3>
-                                    </div>
-                                </div>
-                                <div className="group relative overflow-hidden rounded-lg break-inside-avoid">
-                                    <img alt="A portrait with surrealist elements in muted tones" className="transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3ryswH-4-D7NTxuH9pQ9fJ30q6ZMjJsmpLAzQFT6vOJUAz2eOTbp4c9HDhufXWge-bXrFJ9tAV3HDA3ezkquv8Hj9COLLQQN4mWTWCnbC-OhDJqAGMbQDY3nGyu91IKDRe5eMr2rPk7lN1LXs6i3Q0eBSbrwg8ReP-kL0AR6_Y3hnWWUi9cyRtSc0Fbc6s9QgY4MjQE6lSE1dJns4u8kTLAbBWxOGcMmGLTCtSBPt7ZuvWk7CYVjOVnJl85QcfJBt4vp5YfGmWGg" />
-                                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-text-main/80 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                        <h3 className="font-bold text-white">The Observer</h3>
-                                    </div>
-                                </div>
-                                <div className="group relative overflow-hidden rounded-lg break-inside-avoid">
-                                    <img alt="Monochromatic textured artwork with grey tones" className="transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc0nLPe_VC8WSRQbLAjIJd_Qz3dQ8YItyimUBXiC0U38ix4Nsr5HE1SpD7xFYUVWtTi1Zilt81ABgVm96Lc9FwUkgFj1ZYw-EYZAj9MYpaPSsI0SVFS5rPdsNTloWZZxh0qiP74ybrl40gYkrffYonQejDRWHmB7vsoYOtMqehR3KNqyMgNYROL0zw9TsAF920yJfLxKFV2BOODWKcb0g2DYA1Gky11t4dFN6bL9N_5poMIPK758yRTxvnZNX6tArSatq0vLu3EqQ" />
-                                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-text-main/80 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                        <h3 className="font-bold text-white">Ashen Memory</h3>
-                                    </div>
-                                </div>
-                                <div className="group relative overflow-hidden rounded-lg break-inside-avoid">
-                                    <img alt="A textured abstract piece in earthy tones of brown and green" className="transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnD9KuJqDxmOS0nfDQfwmEou70JTl0RZLB1LnCKoBOXUgmIhN3rkSu5XkDg-EbiDEBPG_bjoDUDBsQO_R6HYhpxDBxYcHTdsan31ZzsWARWBoUn3U8SFniqsvbhkzhn4_sgxHciTOJr_s9aUV416T3qk2_lLwXKrvIvPv23IZt6x7qW0W76QzgO3_3-v-rzc2JXioL8EwXl-BJrrKlnMGxNWQNKOcvO9tLPhliBQuag3e7KoLq79hOLx1qUlhOQJB261PA4lNHUv4" />
-                                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-text-main/80 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                        <h3 className="font-bold text-white">Terra Firma</h3>
-                                    </div>
-                                </div>
-                                <div className="group relative overflow-hidden rounded-lg break-inside-avoid">
-                                    <img alt="Artwork with soft pastel colors and geometric shapes" className="transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCORHxGEJZdSg1fp4pA4cK1i-cC3qvRCSqpg8XPMDVA0qPFZt-FaGxB0eMeNndBMbiok1NQT34h-AvP1UmkwtQG_Oz8ma2Rx-omIPWad5nXgtU3Ui_WEoEqz4d_Fopsvv4byzSS2IZr6Ff2i2OcTfPtuO-lawF-fxwQv22K6Woo1CarAJEtRfnpGX_4n-1gGRrlt-SBSJHUpPUaFznieF2Z6zk4ATaZJBG-R8cs_-C-XVz0ltjXdZWC4DHq7HzKgt1Em9EdAWzOwa8" />
-                                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-text-main/80 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                        <h3 className="font-bold text-white">Whispers of Dawn</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section className="py-16 sm:py-24">
-                            <h2 className="mb-16 text-center text-3xl font-bold leading-tight tracking-[-0.015em] text-text-main">Exhibition Highlights</h2>
-                            <div className="relative">
-                                <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-primary/20"></div>
-                                <div className="space-y-16">
-                                    <div className="relative flex items-center md:items-start">
-                                        <div className="w-1/2 pr-8 text-right md:pr-12">
-                                            <p className="font-bold text-accent">2023</p>
-                                            <h3 className="mt-1 text-lg font-semibold text-text-main">"Ascension" Commission</h3>
-                                            <p className="mt-1 text-sm text-secondary">Corporate Headquarters, NYC</p>
-                                        </div>
-                                        <div className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-background-main bg-primary"></div>
-                                    </div>
-                                    <div className="relative flex items-center md:items-start">
-                                        <div className="w-1/2"></div>
-                                        <div className="w-1/2 pl-8 md:pl-12">
-                                            <p className="font-bold text-accent">2020</p>
-                                            <h3 className="mt-1 text-lg font-semibold text-text-main">Vanguard Artist Award</h3>
-                                            <p className="mt-1 text-sm text-secondary">International Contemporary Art Fair</p>
-                                        </div>
-                                        <div className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-background-main bg-primary"></div>
-                                    </div>
-                                    <div className="relative flex items-center md:items-start">
-                                        <div className="w-1/2 pr-8 text-right md:pr-12">
-                                            <p className="font-bold text-accent">2018</p>
-                                            <h3 className="mt-1 text-lg font-semibold text-text-main">"Ethereal Echoes"</h3>
-                                            <p className="mt-1 text-sm text-secondary">Galerie d'Art Moderne, Paris</p>
-                                        </div>
-                                        <div className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-background-main bg-primary"></div>
-                                    </div>
-                                </div>
                             </div>
                         </section>
                     </div>
-                    <section className="bg-primary/10 py-16 sm:py-20">
-                        <div className="mx-auto max-w-6xl px-4 text-center">
-                            <h2 className="text-3xl font-bold leading-tight tracking-[-0.015em] text-text-main">Bespoke Commissions</h2>
-                            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-secondary">Transform your space with a unique piece of art tailored to your vision. I work closely with clients to create bespoke commissions that resonate with their personal aesthetic and environment.</p>
-                            <button className="mx-auto mt-8 flex h-12 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold leading-normal tracking-[0.015em] text-white transition-all hover:brightness-110">
-                                <span className="truncate">Inquire About a Commission</span>
-                            </button>
+                    <footer className="bg-background-light dark:bg-background-dark border-t border-secondary/10 dark:border-background-light/10 py-12">
+                        <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row justify-between items-center gap-6">
+                            <p className="text-xs text-secondary/60 dark:text-background-light/60">© 2024 Olivia Chen. All Rights Reserved.</p>
+                            <div className="flex items-center gap-5">
+                                <a className="text-secondary/70 dark:text-background-light/70 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+                                    <svg aria-hidden="true" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c-4.42 0-8 3.58-8 8a8.003 8.003 0 0 0 4.582 7.168.6.6 0 0 0 .618-.42.6.6 0 0 0-.226-.658A5.961 5.961 0 0 1 6.315 10c0-3.313 2.687-6 6-6s6 2.687 6 6c0 2.22-.602 4.298-2.032 5.922a.6.6 0 0 0-.226.658.6.6 0 0 0 .618.42A8.003 8.003 0 0 0 20.315 10c0-4.42-3.58-8-8-8Z" fill-rule="evenodd"></path><path d="M11.685 15.399a.6.6 0 0 1 .6-.6h.06a.6.6 0 0 1 .6.6v3.468a.6.6 0 0 1-.6.6h-.06a.6.6 0 0 1-.6-.6v-3.468Z"></path><path d="M12.315 22c-1.285 0-2.518-.305-3.618-.855A.6.6 0 0 1 8.25 20.5a.6.6 0 0 1 .445.195A6.803 6.803 0 0 0 12.315 22a6.803 6.803 0 0 0 3.62-.655.6.6 0 0 1 .445-.195.6.6 0 0 1 .447.645c-1.1.55-2.333.855-3.617.855Z"></path></svg>
+                                    <span className="sr-only">Artsy</span>
+                                </a>
+                                <a className="text-secondary/70 dark:text-background-light/70 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+                                    <svg aria-hidden="true" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Zm3.23.407c.477.17.94.385 1.38.642a.6.6 0 0 1 .28.94l-1.03 1.833a.6.6 0 0 1-.94.28c-.524-.294-1.09-.51-1.68-.642a.6.6 0 0 1-.48-.718l.47-1.932a.6.6 0 0 1 .7-.403Zm-8.86 1.48a.6.6 0 0 1 .94-.28l1.03 1.833a.6.6 0 0 1-.28.94c-.59.333-1.137.74-1.627 1.22a.6.6 0 0 1-.848-.152l-.91-1.423a.6.6 0 0 1 .09-.765c.49-.48.987-.9.155-1.273Zm3.4 15.54a.6.6 0 0 1 .403.7l-.47 1.932a.6.6 0 0 1-.718.48c-.59-.132-1.157-.348-1.68-.642a.6.6 0 0 1-.28-.94l1.03-1.833a.6.6 0 0 1 .94-.28c.44.257.897.472 1.375.643Zm5.636-2.545a.6.6 0 0 1 .765.09l.91 1.423a.6.6 0 0 1-.152.848c-.48.48-.996.89-1.558 1.273a.6.6 0 0 1-.94-.28l-1.03-1.833a.6.6 0 0 1 .28-.94c.49-.28 1.037-.687 1.627-1.22ZM12 8.25A3.75 3.75 0 1 0 12 15.75 3.75 3.75 0 0 0 12 8.25ZM9.75 12a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0Z" fill-rule="evenodd"></path></svg>
+                                    <span className="sr-only">Instagram</span>
+                                </a>
+                            </div>
                         </div>
-                    </section>
-                    <div className="mx-auto w-full max-w-6xl px-4">
-                        <section className="py-16 text-center sm:py-24">
-                            <h2 className="mb-2 text-3xl font-bold leading-tight tracking-[-0.015em] text-text-main">Follow The Process</h2>
-                            <p className="mb-8 text-secondary">Latest updates from the studio on Instagram <a className="font-semibold text-accent" href="#">@aureliasinciairart</a></p>
-                            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-                                <div className="group aspect-square overflow-hidden rounded-lg bg-cover bg-center">
-                                    <div className="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="A close-up of wet paint on a canvas, showing texture." style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCB_B2or9g0zrn8X7BjQQ0-TC66h8bB1YNLjbjZ8Iq8_KU0SHU0j0zZ2L8NxxoJRA8mKcuTP49GdFrKGoKTMk2Jqxpdxwyxm6vE1UOSE3znUDvZnUO3ExW9hH-dV108VIQIO72m5ULdQ5qW8hDmBkjHyU3YVxHtFiphbhDgZMlepC7EY0zY48sBSKjnjToSh5eg6Tb7rZpnGE9GgunfHIptAnieYywjqN0bpeTe1INzZnoqIIpCaDNrncDlbgT4nkEkRQaoWnm2JBA");' }}></div>
-                                </div>
-                                <div className="group aspect-square overflow-hidden rounded-lg bg-cover bg-center">
-                                    <div className="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="The artist's hand holding a palette knife with blue paint." style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWmavQhe_9UAd_im1Di-Gfv8oF3E6lSqKXLiZCA6XhvGueRWslt8Gh-wSXVS5NV5yFx3siOybIghlakGZIin2L2RvsY1HcZUNsamucmFOjuHTvlHYZcB8v_v4lSwXnr_jBlM_Hnb2augGeo51rHok8ppWB9K9rqJ_XaMsJZq0uMh1r7BK56_6H6dpKw3QmIIHcp0yXeb-aqr9E9hYyB5vY8M9syZYxU0-fmaeOB2V2FgU0EPM37YGvP5nwLyxs8rxKVLzH_kwxQHM");' }}></div>
-                                </div>
-                                <div className="group aspect-square overflow-hidden rounded-lg bg-cover bg-center">
-                                    <div className="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="A new, large-scale work in progress on an easel." style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAporbz2u7ufe296mjRp3x80YiDi2Kv-J9QMkgGFNiL5EIyAwBa-3mkwlC9-Yih4Ud3LcesbI7mbANiwNE-ODOmV5FyPZxI_BLR_OcoxWJ1Ym2e0O2h3mIZIF8OtpRV5jkCpA6M_oAH0a3TX4yjfPValQkmeludb8IUzONNb8fXfJZTFXhvomLjk0Ub_1o-47iKr0mDaqzMGQqRL5_BhQ5VN6G3QRSchld1KinZxBGtIJlkQgpvp5fhrWzTuAtVsLiwhsPwnbdclXI");' }}></div>
-                                </div>
-                                <div className="group aspect-square overflow-hidden rounded-lg bg-cover bg-center">
-                                    <div className="h-full w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="A shot of the artist's studio, filled with canvases and art supplies." style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLom2kFcXSPsxjwCavUnC2gcYun6GVuwW1rTXYkW3OOyRR-mnWgLK1d53BvJCtxJuVZXkPWQBj6BMKlF_ROQ2bcw6fZS5U_1fAAjMCiNGbdDt25AnmBEhgl0o9trhMsAd7Ucmvrfp1dvlqDjWueVCeV5e0AJG90GLf7FHCpjMkdlSbqnSiBOt_NU4v_O451SS8lV_j5SNdlxgFLhp2Ax3UdAfqGcAH6GJ2zXHDtVhQJxCzmBdPzZFEOm_KRo298N3WAMtsSAMmjDY");' }}></div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+                    </footer>
                 </main>
-                <Footer />
             </div>
-
         </div>
     );
 }
